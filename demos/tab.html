@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width user-scalable=no initial-scale=1.0 maximun-scale=1.0 minimun-scale=1.0">
+	<title>tabs</title>
+	<link rel="stylesheet" type="text/css" href="../css/lib/tab/tab.css">
+	<link rel="stylesheet" type="text/css" href="../css/lib/tab/custom.css">
+</head>
+<body>
+	<div class="wapper">
+		<div class="tabs">
+			<ol data-role="tab-nav">
+				<li>HTML</li>
+				<li class="active">CSS</li>
+				<li>Javascript</li>
+			</ol>
+			<ol data-role="tab-panes">
+				<li>
+					<div class="circle">
+						1
+					</div>
+				</li>
+				<li class="active">
+					<div class="circle">
+						2
+					</div>
+				</li>
+				<li>
+					<div class="circle">
+						3
+					</div>
+				</li>
+			</ol>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/lib/dom/index.js"></script>
+	<script type="text/javascript" src="../js/lib/tab/tab.js"></script>
+	<script type="text/javascript">
+		new Tabs({
+			element:document.querySelector('.tabs')
+		})
+	</script>
+</body>
+</html>

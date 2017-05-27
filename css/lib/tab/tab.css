@@ -1,0 +1,51 @@
+.tabs{
+	background: lightpink;
+}
+.tabs ol{
+	list-style: none;
+	margin:0;
+	padding:0;
+	font-family: Arial Black, Gadget, sans-serif;
+}
+.tabs ol:first-child{
+	display:flex;
+	border:1px solid lightsalmon;
+	border-bottom:none;
+}
+.tabs ol:first-child>li{
+	flex-grow:1;
+	text-align: center;
+	padding:20px;
+	text-transform:uppercase;
+	cursor: pointer;
+	background: linear-gradient(to bottom,lightpink 0%,lightsalmon 50%,lightpink 100%);
+	text-shadow: 1px 1px 1px white;
+}
+.tabs ol:first-child>li.active{
+	background: lightpink;
+}
+.tabs ol:nth-child(2){
+	border:1px solid lightsalmon;
+	border-top:none;
+	background: lightpink;
+}
+.tabs ol:nth-child(2)>li{
+	display: none;
+	min-height: 5em;
+}
+.tabs ol:nth-child(2)>li.active{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.circle{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width:80px;
+	height: 80px;
+	border-radius: 50%;
+	background: #FAFAD2;
+	font-size: 28px;
+	margin:5em 0;
+}

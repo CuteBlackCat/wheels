@@ -1,0 +1,25 @@
+/*通用样式*/
+*{
+	box-sizing: border-box;
+}
+/*body样式*/
+body{
+	display: flex;
+	justify-content:center;
+	align-content:flex-start;
+	min-height: 10vh;
+	background: #FFFFF0;
+}
+/*容器样式*/
+.wapper{
+	margin-top:3em;
+	position: relative;
+	width:460px;
+	border-radius: 4px;
+	padding: 8px;
+	background: repeating-linear-gradient( -45deg, aqua,aqua 2px, aquamarine 2px, aquamarine 4px);
+}
+.wapper::before{
+	content:'';display: block;position: absolute;top: -2px; bottom: -2px; left: -2px; right: -2px;
+      border: 1px solid #CBC7BC; border-radius: 6px; z-index: -1;
+}

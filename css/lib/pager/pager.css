@@ -1,0 +1,48 @@
+.pager{
+	display: inline-flex;
+	padding:1px;
+	margin:0.5em 0;
+}
+.pager nav{
+	display: flex;
+	align-items: center;
+	padding:3px;
+	border-radius: 3px;
+	background: lightpink;
+	box-shadow: 0 0 2px white;
+	color: crimson;
+}
+.pager nav>ul{
+	display: flex;
+	justify-content: center;
+}
+.pager nav>ul li{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width:40px;
+	height:40px;
+	margin:5px;
+	background: bisque;
+	border-radius: 3px;
+	cursor: pointer;
+	box-shadow: 0 0 12px lightsalmon;
+	text-shadow: 0 0 4px lightpink;
+}
+.pager nav>ul li:hover span,.pager nav>button:hover{
+	font-size: 22px;
+}
+.pager nav>button{
+	border:none;
+	background: bisque;
+	margin:5px;
+	border-radius: 3px;
+	cursor: pointer;
+	box-shadow: 0 0 12px lightsalmon;
+	color: crimson;
+}
+.pager nav>ul li.current{
+	background: crimson;
+	color: lightpink;
+}
+

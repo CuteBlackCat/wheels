@@ -1,0 +1,14 @@
+*{
+	box-sizing: border-box;
+	font-size: 18px;
+	font-family: Arial Black, Gadget, sans-serif;
+}
+body{
+	text-align: center;
+	background: #FFFFF0;
+}
+ul{
+	list-style: none;
+	margin:0;
+	padding:0;
+}
