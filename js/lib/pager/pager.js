@@ -67,7 +67,6 @@ class Pager{
 
 	_createNavlist(){
 		let currentPage = this.currentPage;
-		console.log(currentPage);
 		let {totalPages,buttonNum} = this.options;
 		let startOne = Math.max(currentPage - Math.round(buttonNum / 2),1);
 		let endOne = Math.min(startOne + buttonNum - 1,totalPages);
@@ -75,14 +74,12 @@ class Pager{
 		let startTwo = Math.max(endTwo - buttonNum + 1,1);
 		let start = Math.min(startOne,startTwo);
 		let end = Math.max(endOne,endTwo);
-		console.log(startOne,startTwo,endOne,endTwo);
 
 		let ul = dom.creat('<ul data-role="pageNumbers"></ul>');
 		for(let i = start;i <= end;i++){
 			let li = dom.creat(`<li data-page="${i}">${this.options.templates.number.replace('%page%',i)}</li>`);
 			if(i === this.currentPage){
 				li.classList.add('current');
-				console.log(i+'1111');
 			}
 			ul.appendChild(li);
 		}
@@ -112,17 +109,19 @@ class Pager{
 		if(!page || page > this.options.totalPages || page === this.currentPage){
 			return;
 		};
+		if(this.options.pageQuery){
+			bom.queryString.set(this.options.pageQuery,page)
+		}
 		this.currentPage = page;
+		this.options.element.dispatchEvent(new CustomEvent('pageChange',{detail:{page}}))
 		this.reRender();
 	}
 
 	reRender(){
 		this._checkButtons();
 		let newNavlist = this._createNavlist();
-		console.log(newNavlist);
 		let oldNavlist = this.domRefs.navList;
 		oldNavlist.parentNode.replaceChild(newNavlist,oldNavlist);
 		this.domRefs.navList = newNavlist;
-		console.log('success');
 	}
 }

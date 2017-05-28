@@ -60,6 +60,11 @@ let dom = {
 		})
 	},
 
+	/**
+	 * [index 返回节点在兄弟节点中的位置索引]
+	 * @param  {[object]} element [dom]
+	 * @return {[number]}         [description]
+	 */
 	index(element){
 		let siblings = element.parentNode.children;
 		for(let i = 0;i < siblings.length;i++){

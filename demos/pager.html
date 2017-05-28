@@ -35,6 +35,7 @@
 	 	<div class="pager"></div>
 	 </div> 
 	 <script type="text/javascript" src="../js/lib/dom/index.js"></script>
+	 <script type="text/javascript" src="../js/lib/bom/index.js"></script>
 	 <script type="text/javascript" src="../js/lib/pager/pager.js"></script>
 	 <script type="text/javascript">
 		let pagers = document.querySelectorAll('.pager')
@@ -42,6 +43,16 @@
 	 		element:pagers[0],
 	 		totalPages:100,
 	 		currentPage:1,
+	 	});
+	 	pagers[0].addEventListener('pageChange',(e) =>{
+	 		console.log(e.detail.page)
+	 	});
+
+	 	new Pager({
+	 		element:pagers[1],
+	 		currentPage:parseInt(bom.queryString.get('page'),10),
+	 		totalPages:100,
+	 		pageQuery:'page'
 	 	})
 	 </script>
 </body>

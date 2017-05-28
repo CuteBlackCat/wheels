@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>fullPage</title>
+	<link rel="stylesheet" type="text/css" href="../css/lib/fullPage/custom.css">
+	<link rel="stylesheet" type="text/css" href="../css/lib/fullPage/fullPage.css">
+</head>
+<body>
+	<div class="page">
+	<section>
+		<div class="circle">1</div>
+	</section>
+	<section>
+		<div class="circle">2</div>
+	</section>
+	<section>
+		<div class="circle">3</div>
+	</section>
+	<section>
+		<div class="circle">4</div>
+	</section>
+	</div>
+	<script type="text/javascript" src="../js/lib/dom/index.js"></script>
+	<script type="text/javascript" src="../js/lib/fullPage/fullPage.js"></script>
+	<script type="text/javascript">
+		new FullPage({
+			element:document.querySelector('body>.page')
+		});
+	</script>
+</body>
+</html>
